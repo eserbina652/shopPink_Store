@@ -1,9 +1,11 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {api} from "../api/api";
 import themeReducer from './reducers/theme/index'
+import authReducer from './reducers/authorization/index'
 
 const rootReducer = combineReducers({
     themeReducer,
+    authReducer,
     [api.reducerPath]: api.reducer
 })
 
