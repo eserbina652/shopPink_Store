@@ -13,9 +13,13 @@ export const api = createApi({
                 method: 'POST',
             })
         }),
+        getCategories: build.query<string[], void>({
+            query: () => `/products/categories`
+        }),
     })
 })
 
 export const {
     useLoginMutation,
+    useGetCategoriesQuery,
 } = api

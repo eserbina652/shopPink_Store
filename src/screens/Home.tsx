@@ -1,11 +1,8 @@
 import React from 'react';
+import CanvasComponent from "../canvas/Canvas";
 
 const Home = () => {
-    return (
-        <div>
-            +
-        </div>
-    );
+    return <CanvasComponent/>
 };
 
 export default Home;

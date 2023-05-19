@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Menu = styled.button`
   background-color: ${props => props.theme.buttons.secondary};
   border: none;
@@ -14,7 +15,6 @@ export const Menu = styled.button`
     padding: 0;
   }
 `
-
 export const ListWrapper = styled.div<{ menu: boolean }>`
   background-color: ${props => props.theme.colors.secondary};
   width: auto;
@@ -22,6 +22,7 @@ export const ListWrapper = styled.div<{ menu: boolean }>`
   border-radius: 0.5vw;
   display: flex;
   position: absolute;
+  //z-index: -3;
   top: 13.5vh;
   left: 0;
   padding: 10px 30px;
@@ -85,4 +86,22 @@ export const ListWrapper = styled.div<{ menu: boolean }>`
     box-shadow: inset 3px 10px 6px -2px ${props => props.theme.colors.shadow};
     margin: 24px;
   }
+`
+export const List = styled.h2`
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  font-size: 20px;
+  color: ${props => props.theme.fontColors.primary};
+  cursor: pointer;
+
+  :hover {
+    transition-duration: 1s;
+    color: ${props => props.theme.fontColors.secondary};
+    background-color: ${props => props.theme.colors.shadow};
+    border-radius: 20px;
+  }
+
 `
