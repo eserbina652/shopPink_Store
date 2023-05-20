@@ -9,6 +9,9 @@ import {useAppDispatch, useAppSelector} from "./hooks/redux";
 import Navbar from "./components/navbar/Navbar";
 import {onBlueMode} from "./store/reducers/theme";
 import {onLogin} from "./store/reducers/authorization";
+import ProductsList from "./components/products/productPage/ProductsList";
+import ProductDescription from "./components/products/descriptionPage/ProductDescription";
+import BasketList from "./screens/buyBasket/BasketList";
 
 const App = () => {
   const theme = useAppSelector(state => state.themeReducer.color)
@@ -39,6 +42,9 @@ const App = () => {
           <Routes>
             <Route path='/' element={<AuthForm/>}/>
             <Route path='/home' element={<Home/>}/>
+            <Route path='/products' element={<ProductsList/>}/>
+            <Route path="/productDescription" element={<ProductDescription/>}/>
+            <Route path='/buyBasket' element={<BasketList/>}/>
           </Routes>
         </AppGridBox>
       </ThemeProvider>

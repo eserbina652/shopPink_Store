@@ -1,6 +1,7 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {ILoginForm} from "../screens/authorization/interface";
 import {ILoginedUser} from "./types/userstypes";
+import {IProducts} from "../components/products/types";
 
 export const api = createApi({
     reducerPath: 'postData',
@@ -16,10 +17,14 @@ export const api = createApi({
         getCategories: build.query<string[], void>({
             query: () => `/products/categories`
         }),
+        getProducts: build.query<IProducts, string>({
+            query: categoryName => `/products/category/${categoryName}`
+        }),
     })
 })
 
 export const {
     useLoginMutation,
     useGetCategoriesQuery,
+    useGetProductsQuery,
 } = api
