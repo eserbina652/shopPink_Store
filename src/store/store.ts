@@ -3,11 +3,13 @@ import {api} from "../api/api";
 import themeReducer from './reducers/theme/index'
 import authReducer from './reducers/authorization/index'
 import basketReducer from './reducers/buyBasket/index'
+import popupReducer from './reducers/popup/index'
 
 const rootReducer = combineReducers({
     themeReducer,
     authReducer,
     basketReducer,
+    popupReducer,
     [api.reducerPath]: api.reducer
 })
 

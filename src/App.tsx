@@ -9,46 +9,52 @@ import {useAppDispatch, useAppSelector} from "./hooks/redux";
 import Navbar from "./components/navbar/Navbar";
 import {onBlueMode} from "./store/reducers/theme";
 import {onLogin} from "./store/reducers/authorization";
-import ProductsList from "./components/products/productPage/ProductsList";
-import ProductDescription from "./components/products/descriptionPage/ProductDescription";
+import ProductsList from "./screens/products/ProductsList";
+import Profile from "./screens/profile/Profile";
 import BasketList from "./screens/buyBasket/BasketList";
+import Popup from "./popups/Popup";
+import ProductDescription from "./screens/productInfo/ProductDescription";
 
 const App = () => {
-  const theme = useAppSelector(state => state.themeReducer.color)
-  const dispatch = useAppDispatch()
-  const navigate = useNavigate()
-  const getInitialTheme = () => {
-    const theme = localStorage.getItem('theme')
-    if (theme) {
-      dispatch(onBlueMode())
+    const theme = useAppSelector(state => state.themeReducer.color)
+    const isOpenPopup = useAppSelector(state => state.popupReducer.isOpen)
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+    const getInitialTheme = () => {
+        const theme = localStorage.getItem('theme')
+        if (theme) {
+            dispatch(onBlueMode())
+        }
     }
-  }
 
-  useEffect(() => {
-    const user = localStorage.getItem('userId')
-    getInitialTheme()
-    if (user) {
-      dispatch(onLogin(user))
-    } else {
-      navigate('/')
-    }
-  }, [])
-  return (
-      <ThemeProvider theme={theme ? themeBlue : themePink}>
-        <AppGridBox style={{minHeight: '100svh'}}>
-          <Header>
-            <Navbar/>
-          </Header>
-          <Routes>
-            <Route path='/' element={<AuthForm/>}/>
-            <Route path='/home' element={<Home/>}/>
-            <Route path='/products' element={<ProductsList/>}/>
-            <Route path="/productDescription" element={<ProductDescription/>}/>
-            <Route path='/buyBasket' element={<BasketList/>}/>
-          </Routes>
-        </AppGridBox>
-      </ThemeProvider>
-  );
+
+    useEffect(() => {
+        const user = localStorage.getItem('userId')
+        getInitialTheme()
+        if (user) {
+            dispatch(onLogin(user))
+        } else {
+            navigate('/')
+        }
+    }, [])
+    return (
+        <ThemeProvider theme={theme ? themeBlue : themePink}>
+            <AppGridBox style={{minHeight: '100svh'}}>
+                <Header>
+                    <Navbar/>
+                </Header>
+                {isOpenPopup && <Popup/>}
+                <Routes>
+                    <Route path='/' element={<AuthForm/>}/>
+                    <Route path='/home' element={<Home/>}/>
+                    <Route path='/products' element={<ProductsList/>}/>
+                    <Route path="/productDescription" element={<ProductDescription/>}/>
+                    <Route path='/buyBasket' element={<BasketList/>}/>
+                    <Route path='/profile' element={<Profile/>}/>
+                </Routes>
+            </AppGridBox>
+        </ThemeProvider>
+    );
 };
 
 export default App;

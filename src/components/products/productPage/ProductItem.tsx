@@ -2,7 +2,7 @@ import React from 'react';
 import {Loading, PrimaryFont} from "../../../styles";
 import {Elements} from "./index";
 import {useNavigate} from "react-router-dom";
-import {Image} from "../descriptionPage";
+import {Image} from "../../../screens/productInfo";
 import {SeeMore} from "../../buttons/seeMore";
 import {Product} from "../types";
 

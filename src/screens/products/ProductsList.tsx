@@ -1,8 +1,8 @@
 import React from 'react';
 import {useLocation} from "react-router-dom";
-import {useGetProductsQuery} from "../../../api/api";
-import {CategoryListWrap, ElementSContainer} from "./index";
-import ProductItem from "./ProductItem";
+import {useGetProductsQuery} from "../../api/api";
+import {CategoryListWrap, ElementSContainer} from "../../components/products/productPage";
+import ProductItem from "../../components/products/productPage/ProductItem";
 
 const ProductsList = () => {
     const {state: category} = useLocation()

@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {Nullable} from "../../../utils/types";
-import {IUser} from "../../../api/types/userstypes";
+import {IUser} from "../../../screens/profile/types";
 
 interface IInitialState {
     user: Nullable<IUser>

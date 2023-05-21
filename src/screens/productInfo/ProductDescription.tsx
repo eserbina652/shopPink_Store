@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {useLocation} from "react-router-dom";
 import {DescriptionBox, FocusElement, Image, ImageGallery, ProductDescriptionWrap} from "./index";
-import {DescriptionFont, SecondaryFont} from "../../../styles";
-import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
-import {PrevNextButton} from "../../buttons/incDecButton";
-import {BuyButton} from "../../buttons/buyBtn";
-import {onAdd, onIncrease} from "../../../store/reducers/buyBasket";
+import {DescriptionFont, SecondaryFont} from "../../styles";
+import {useAppDispatch, useAppSelector} from "../../hooks/redux";
+import {PrevNextButton} from "../../components/buttons/incDecButton";
+import {BuyButton} from "../../components/buttons/buyBtn";
+import {onAdd, onIncrease} from "../../store/reducers/buyBasket";
 
 const ProductDescription = () => {
     const dispatch = useAppDispatch()
