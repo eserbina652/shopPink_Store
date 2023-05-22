@@ -15,7 +15,7 @@ export const ImageGallery = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-border: ${props => props.theme.elements.secondary} 2px solid;
+  border: ${props => props.theme.elements.secondary} 2px solid;
   border-radius: 30px;
   padding: 10px;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
@@ -37,7 +37,7 @@ export const Image = styled.img`
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
   @media (max-width: 1024px) {
     max-width: 65%;
-    max-height: 75%;  
+    max-height: 75%;
   }
   @media (max-width: 768px) {
     max-width: 80%;
@@ -68,6 +68,6 @@ export const DescriptionBox = styled.div`
   }
 `
 export const FocusElement = styled.div`
-    background-color: ${props => props.theme.colors.shadow};
+  background-color: ${props => props.theme.colors.shadow};
 `
 
