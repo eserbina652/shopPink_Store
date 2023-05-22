@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const ProductDescriptionWrap = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin: 10vh 15vw;
+  margin: 5vw 15vw;
+  max-height: 35vw;
+  min-height: 35vw;
   grid-gap: 20px;
   @media (max-width: 1024px) {
-    margin: 7vh 3vw;
+    margin: 7vw 3vw;
     grid-gap: 10px;
   }
 `
@@ -17,32 +19,36 @@ export const ImageGallery = styled.div`
   justify-content: space-around;
   border: ${props => props.theme.elements.secondary} 2px solid;
   border-radius: 30px;
-  padding: 10px;
+  //padding: 10px;
+  max-height: 35vw;
+  min-height: 35vw;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
   @media (max-width: 1024px) {
     max-width: 65vw;
-    max-height: 50vh;
+    max-height: 50vw;
   }
   @media (max-width: 768px) {
     grid-column: 1/3;
     grid-row: 1/2;
     margin-left: 11vw;
     max-width: 70vw;
-    max-height: 30vh;
+    max-height: 30vw;
   }
 `
 export const Image = styled.img`
-  max-width: 80%;
-  max-height: 100%;
+  max-width: 40%;
+  max-height: 30%;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
-  @media (max-width: 1024px) {
-    max-width: 65%;
-    max-height: 75%;
-  }
-  @media (max-width: 768px) {
-    max-width: 80%;
-    max-height: 80%;
-  }
+`
+
+export const DescImage = styled(Image)`
+  max-width: 80%;
+  max-height: 80%;
+`
+
+export const IncDecWrap = styled.div`
+  display: inherit;
+  justify-content: center;
 `
 
 export const DescriptionBox = styled.div`
@@ -68,6 +74,6 @@ export const DescriptionBox = styled.div`
   }
 `
 export const FocusElement = styled.div`
-  background-color: ${props => props.theme.colors.shadow};
+    background-color: ${props => props.theme.colors.shadow};
 `
 

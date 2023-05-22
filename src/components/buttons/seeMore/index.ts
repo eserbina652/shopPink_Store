@@ -5,4 +5,5 @@ export const SeeMore = styled(SignIn)`
   display: flex;
   position: relative;
   justify-content: center;
+  margin: 1vw 0;
 `

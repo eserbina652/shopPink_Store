@@ -28,7 +28,7 @@ const CanvasComponent: React.FC = () => {//идентичні компонент
             if (canvasCtxRef.current) {
                 effect.current = new Effect(dimensions.width, dimensions.height);
                 canvasCtxRef.current.canvas.width = window.innerWidth;
-                canvasCtxRef.current.canvas.height = window.innerHeight-117;
+                canvasCtxRef.current.canvas.height = window.innerHeight-135;
             }
             //@ts-ignore
             requestRef.current = requestAnimationFrame(animate);

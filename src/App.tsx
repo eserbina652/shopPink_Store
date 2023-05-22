@@ -14,6 +14,7 @@ import Profile from "./screens/profile/Profile";
 import BasketList from "./screens/buyBasket/BasketList";
 import Popup from "./popups/Popup";
 import ProductDescription from "./screens/productInfo/ProductDescription";
+import OtherProfile from "./screens/otherUser/OtherProfile";
 
 const App = () => {
     const theme = useAppSelector(state => state.themeReducer.color)
@@ -51,6 +52,7 @@ const App = () => {
                     <Route path="/productDescription" element={<ProductDescription/>}/>
                     <Route path='/buyBasket' element={<BasketList/>}/>
                     <Route path='/profile' element={<Profile/>}/>
+                    <Route path='/userDescription' element={<OtherProfile/>}/>
                 </Routes>
             </AppGridBox>
         </ThemeProvider>

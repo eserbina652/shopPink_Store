@@ -1,7 +1,7 @@
 export const themePink = {
     colors: {
         primary: '#fff6f6',
-        secondary: '#fce1e5',
+        secondary: '#000000',
         shadow: 'rgba(255, 20, 147, 0.49)',
         linearGradient: {
             lightColor: 'rgba(195,220,255,1) 20%',
@@ -20,13 +20,13 @@ export const themePink = {
     fontColors: {
         primary: 'deeppink',
         secondary: 'white',
-        description: 'black'
+        description: 'white'
     },
     posts: {
         primary: 'pink',
         secondary: 'deeppink',
         accentColor: 'white',
-        background: '',
+        background: 'rgba(194,0,101,0.49)',
         transparent: 'rgba(255, 20, 147, 0.49)'
     }
 }
@@ -34,7 +34,7 @@ export const themePink = {
 export const themeBlue = {
     colors: {
         primary: '#dfecff',
-        secondary: '#c3dcff',
+        secondary: '#000000',
         shadow: 'rgba(0, 0, 255, 0.49)',
         linearGradient: {
             lightColor: 'rgba(195,220,255,1) 20%',
@@ -43,26 +43,24 @@ export const themeBlue = {
     },
     elements: {
         primary: 'snow',
-        secondary: 'blue',
+        secondary: '#3636ff',
     },
     buttons: {
         primary: 'lightblue',
-        secondary: 'blue',
+        secondary: '#3636ff',
         border: 'snow'
     },
     fontColors: {
-        primary: 'blue',
+        primary: '#3636ff',
         secondary: 'white',
-        description: 'black'
+        description: 'white'
     },
     posts: {
         primary: 'lightblue',
-        secondary: 'blue',
+        secondary: '#3636ff',
         accentColor: 'white',
         background: 'rgba(84,84,248,0.49)',
         transparent: 'rgba(65,65,131,0.49)'
     }
 }
-
-
 

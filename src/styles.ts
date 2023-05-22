@@ -9,16 +9,6 @@ export const Global = createGlobalStyle`
   }
 `
 
-export const FlexBox = styled.div<{ position?: string; direction?: string; align?: string; justify?: string; margin?: string }>`
-  display: flex;
-  position: ${({position}) => position || 'relative'};
-  flex-direction: ${({direction}) => direction || 'row'};
-  align-items: ${({align}) => align || 'center'};
-  justify-content: ${({justify}) => justify || 'center'};
-  margin: ${({margin}) => margin || '0'};
-  border: ${props => props.theme.colors.secondary};
-`
-
 export const AppGridBox = styled.div<{ margin?: string; tempRow?: string }>`
   display: grid;
   position: relative;
@@ -31,7 +21,7 @@ export const AppGridBox = styled.div<{ margin?: string; tempRow?: string }>`
 export const PrimaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   font-size: ${({fontSize}) => fontSize || '24px'};
   color: ${props => props.theme.fontColors.primary};
-  padding: ${({padding}) => padding || '10px'};
+  padding: ${({padding}) => padding || '0.7vw'};
 
   & a {
     text-decoration: none;
@@ -76,7 +66,7 @@ export const ErrorFont = styled.h1<{ fontSize?: string; padding?: string }>`
   @media (max-width: 1024px) {
     font-size: 16px;
   }
-  
+
 `
 export const Loading = styled.span`
   width: 88px;
@@ -132,7 +122,7 @@ export const Header = styled.div`
   top: 0;
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
   justify-items: center;
-  width: 100svw;
+  width: auto;
   z-index: 2;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
   @media (max-width: 1024px) {
@@ -145,5 +135,21 @@ export const Header = styled.div`
     margin-top: -40px;
     overflow-x: scroll;
     overflow-y: hidden;
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${props => props.theme.posts.accentColor};
+      border-radius: 20px;
+      box-shadow: ${props => props.theme.buttons.secondary} 2px 4px 10px 1px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 30px;
+      background-color: transparent;
+      box-shadow: inset 3px 10px 6px -2px ${props => props.theme.colors.shadow};
+      margin: 24px;
+    }
   }
 `

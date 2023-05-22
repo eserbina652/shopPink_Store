@@ -7,8 +7,8 @@ export const GridBox = styled.div<{ alignItems?: string; justifyContent?: string
   justify-content: ${({justifyContent}) => justifyContent || 'center'};
   margin: ${({margin}) => margin || '0'};
   border: ${props => props.theme.colors.secondary};
-  min-height: 88vh;
-background-color: ${props => props.theme.colors.secondary};
+  min-height: 45vw;
+  background-color: ${props => props.theme.colors.secondary};
 `
 export const Form = styled.form`
   display: flex;
@@ -17,7 +17,7 @@ export const Form = styled.form`
   background-color: ${props => props.theme.colors.primary};
   border-radius: 20px;
   padding: 30px;
-  max-height: 30vh;
+  max-height: 20vw;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.elements.secondary};
 `
 

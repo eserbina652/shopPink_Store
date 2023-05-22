@@ -23,21 +23,22 @@ export const ListWrapper = styled.div<{ menu: boolean }>`
   display: flex;
   position: absolute;
   //z-index: -3;
-  top: 13.5vh;
+  top: 7.5vw;
   left: 0;
   padding: 10px 30px;
   flex-direction: column;
   overflow-x: hidden;
-  height: 83vh;
+  height: 45vw;
   animation-duration: 1s;
   @media (max-width: 1024px) {
-    top: 10.25vh;
+    top: 10.25vw;
   }
   @media (max-width: 768px) {
-    top: 8.25vh;
+    top: 13.5vw;
   }
   @media (max-width: 480px) {
-    top: 10vh;
+    position: fixed;
+    top: 18vw;
   }
 
   &.openMenu {
@@ -100,7 +101,7 @@ export const List = styled.h2`
   :hover {
     transition-duration: 1s;
     color: ${props => props.theme.fontColors.secondary};
-    background-color: ${props => props.theme.colors.shadow};
+    background-color: ${props => props.theme.colors.primary};
     border-radius: 20px;
   }
 
