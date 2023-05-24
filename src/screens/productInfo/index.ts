@@ -35,12 +35,16 @@ export const ImageGallery = styled.div`
     max-height: 30vw;
   }
 `
-export const Image = styled.img`
-  max-width: 40%;
-  max-height: 30%;
+export const ImageInGallery = styled.img`
+  max-width: 100%;
+  max-height: 80%;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
 `
-
+export const Image = styled.img`
+  max-width: 50%;
+  max-height: 50%;
+  box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
+`
 export const DescImage = styled(Image)`
   max-width: 80%;
   max-height: 80%;

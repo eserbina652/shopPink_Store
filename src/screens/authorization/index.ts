@@ -17,7 +17,7 @@ export const Form = styled.form`
   background-color: ${props => props.theme.colors.primary};
   border-radius: 20px;
   padding: 30px;
-  max-height: 20vw;
+  max-height: min-content;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.elements.secondary};
 `
 

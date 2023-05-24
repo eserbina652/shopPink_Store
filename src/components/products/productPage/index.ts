@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ElementSContainer = styled.div`
   display: flex;
-  max-height: 20vw;
+  max-height: max-content;
   border: 3px solid ${props => props.theme.buttons.secondary};
   border-radius: 20px;
   justify-content: center;

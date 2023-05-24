@@ -1,6 +1,6 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {ILoginForm} from "../screens/authorization/interface";
-import {ILoginedUser} from "./types/userstypes";
+import {ILoginedUser, ISearchedUser} from "./types/userstypes";
 import {IProducts} from "../components/products/types";
 import {IUser, IUserPosts} from "../screens/profile/types";
 
@@ -27,6 +27,12 @@ export const api = createApi({
         getUserPosts: build.query<IUserPosts, number>({
             query: userId => `/users/${userId}/posts`
         }),
+        getSearchedProducts: build.query<IProducts, string>({
+            query: productInputText => `/products/search?q=${productInputText}`
+        }),
+        getSearchedUsers: build.query<ISearchedUser, string>({
+            query: userInputText => `/users/search?q=${userInputText}`
+        }),
     })
 })
 
@@ -34,6 +40,5 @@ export const {
     useLoginMutation,
     useGetCategoriesQuery,
     useGetProductsQuery,
-    useGetSingleUserQuery,
-    useGetUserPostsQuery
+    useGetUserPostsQuery,
 } = api

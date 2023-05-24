@@ -1,3 +1,5 @@
+import {IUser} from "../../screens/profile/types";
+
 export interface ILoginedUser {
     id: number;
     username: string;
@@ -7,4 +9,11 @@ export interface ILoginedUser {
     gender: string;
     image: string;
     token: string;
+}
+
+export interface ISearchedUser {
+    limit: number;
+    skip: number;
+    total: number;
+    users: IUser[];
 }

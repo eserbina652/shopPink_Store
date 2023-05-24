@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useLocation} from "react-router-dom";
-import {DescriptionBox, FocusElement, Image, ImageGallery, ProductDescriptionWrap} from "./index";
+import {DescriptionBox, FocusElement, ImageGallery, ImageInGallery, ProductDescriptionWrap} from "./index";
 import {DescriptionFont, SecondaryFont} from "../../styles";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {PrevNextButton} from "../../components/buttons/incDecButton";
@@ -40,7 +40,7 @@ const ProductDescription = () => {
         <ProductDescriptionWrap>
             <ImageGallery>
                 <PrevNextButton onClick={handleDecrease}>Prev</PrevNextButton>
-                <Image src={product.images[imgCount]}/>
+                <ImageInGallery src={product.images[imgCount]}/>
                 <PrevNextButton onClick={handleIncrease}>Next</PrevNextButton>
             </ImageGallery>
             <DescriptionBox>
