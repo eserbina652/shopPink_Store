@@ -12,6 +12,7 @@ const ProductDescription = () => {
     const basketList = useAppSelector(state => state.basketReducer.basketList)
     const {state: product} = useLocation()
     const [imgCount, setImgCount] = useState(0)
+
     const handleIncrease = () => {
         if (imgCount < product.images.length - 1) {
             setImgCount(imgCount + 1);
@@ -20,11 +21,10 @@ const ProductDescription = () => {
         }
     };
     const handleDecrease = () => {
-        if (imgCount <= product.images.length - 1) {
+        if (imgCount > 0) {
             setImgCount(imgCount - 1);
-        }
-        if (imgCount <= 0) {
-            setImgCount(0);
+        } else {
+            setImgCount(product.images.length - 1);
         }
     };
 
