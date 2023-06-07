@@ -1,5 +1,7 @@
 READ ME!
 
+#shopPink_Store
+
 REQUIRED:
 In this project, authorization will be required to enter:
 username: kminchelle / password: 0lelplR
