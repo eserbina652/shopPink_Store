@@ -1,6 +1,6 @@
 READ ME!
 
-#shopPink_Store
+# shopPink_Store
 
 REQUIRED:
 In this project, authorization will be required to enter:
