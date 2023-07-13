@@ -10,6 +10,11 @@ export const PopupsWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.77);
   position: fixed;
   z-index: 10;
+  @media(max-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+  }
 `;
 
 export const PopupWindow = styled.div`

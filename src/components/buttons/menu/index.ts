@@ -13,6 +13,7 @@ export const Menu = styled.button`
   }
   @media (max-width: 768px) {
     padding: 0;
+    margin: 0;
   }
 `
 export const ListWrapper = styled.div<{ menu: boolean }>`

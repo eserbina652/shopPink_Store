@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const Form = styled.form``
+export const Form = styled.form`
+  position: relative;
+  margin-bottom: 26px;
+`
 
 export const Label = styled.label`
   input[type='checkbox'] {
@@ -17,15 +20,17 @@ export const Label = styled.label`
     @media (max-width: 1024px) {
       left: 2.7vw;
     }
-
+    @media (max-width: 768px) {
+      left: 20px;
+    }
   }
 
 `
 
 export const CheckBoxText = styled.div`
-  font-size: 2vw;
   position: relative;
-  padding: 0 0 0.3vw 4vw;
+  font-size: 15px;
+  padding: 0 0 3px 4px;
   cursor: pointer;
 
   &:before {
@@ -43,6 +48,11 @@ export const CheckBoxText = styled.div`
       width: 5.25vw;
       height: 2.5vw;
       border-radius: 1vw;
+    }
+    @media (max-width: 768px) {
+      width: 35px;
+      height: 20px;
+      border-radius: 10px;
     }
   }
 
@@ -62,6 +72,13 @@ export const CheckBoxText = styled.div`
       left: 0.5vw;
       border-radius: 5vw;
       top: -0.1vw;
+    }
+    @media (max-width: 768px) {
+      width: 11px;
+      left: 4px;
+      border-radius: 5px;
+      top: -0.5px;
+      height: 16px;
     }
   }
 `

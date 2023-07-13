@@ -20,14 +20,12 @@ const SwitchBtn = () => {
     }
 
     return (
-        <div>
             <Form action="/">
                 <Label title='switch'>
                     <input onClick={handleChangeTheme} type="checkbox"/>
                     <CheckBoxText className='checkbox__text'></CheckBoxText>
                 </Label>
             </Form>
-        </div>
     );
 };
 

@@ -27,7 +27,12 @@ export const InputSearch = styled.input`
     max-height: 20px;
     margin-bottom: 25px;
   }
-
+  @media (max-width: 768px) {
+    //max-width: 15vw;
+    //font-size: 16px;
+    //max-height: fit-content;
+    //margin: 0;
+  }
 `;
 
 export const ImageSearch = styled.img`

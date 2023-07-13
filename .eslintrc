@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,//робота в межах браузера
+    "es6": true, //підтримка es6
+    "node": true //підтримка ноди в глобальних змінних
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ]
+,
+   "rules": {
+     "semi": "error", //крапка із комою буде сприйматися як помилка
+     "no-console": "error",
+     "no-plusplus": "error",
+     "eol-last": "off",
+     "max-len": ["error", 100, {"ignoreUrls": true}],//максимальна довжина
+     //строки не включаючи URL адрессу
+     "no-tabs": "error",
+     "comma-dangle": "error",//кома на кінці елементів об'єктів
+     "prefer-destructuring": "error",
+     "indent": ["error", 2], // кількість відступів
+     "no-param-reassign": "error"//перевизначення змінних
+   }
+}

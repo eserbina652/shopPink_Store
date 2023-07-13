@@ -129,12 +129,15 @@ export const Header = styled.div`
     padding: 25px 20px 10px 20px;
   }
   @media (max-width: 768px) {
-    padding: 25px 10px 10px 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
   @media (max-width: 480px) {
-    margin-top: -40px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    //margin-top: -40px;
+    //overflow-x: scroll;
+    //overflow-y: hidden;
     ::-webkit-scrollbar {
       width: 12px;
     }
@@ -153,3 +156,4 @@ export const Header = styled.div`
     }
   }
 `
+
