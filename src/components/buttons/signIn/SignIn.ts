@@ -15,4 +15,4 @@ export const SignIn = styled.button`
     background-color: ${props => props.theme.buttons.secondary};
     border: 2px ${props => props.theme.buttons.border} solid;
   }
-`
+`;

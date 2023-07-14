@@ -7,7 +7,7 @@ export const Global = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-`
+`;
 
 export const AppGridBox = styled.div<{ margin?: string; tempRow?: string }>`
   display: grid;
@@ -16,7 +16,7 @@ export const AppGridBox = styled.div<{ margin?: string; tempRow?: string }>`
   border: ${props => props.theme.colors.secondary};
   grid-template-rows: ${({tempRow}) => tempRow || '0.2fr 3fr'};
   background-color: ${props => props.theme.colors.secondary};
-`
+`;
 
 export const PrimaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   font-size: ${({fontSize}) => fontSize || '24px'};
@@ -33,7 +33,7 @@ export const PrimaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   @media (max-width: 768px) {
     font-size: 18px;
   }
-`
+`;
 
 export const SecondaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   font-size: ${({fontSize}) => fontSize || '20px'};
@@ -45,7 +45,7 @@ export const SecondaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   @media (max-width: 768px) {
     font-size: 16px;
   }
-`
+`;
 
 export const DescriptionFont = styled.h1<{ fontSize?: string; padding?: string }>`
   font-size: ${({fontSize}) => fontSize || '20px'};
@@ -57,7 +57,7 @@ export const DescriptionFont = styled.h1<{ fontSize?: string; padding?: string }
   @media (max-width: 768px) {
     font-size: 16px;
   }
-`
+`;
 
 export const ErrorFont = styled.h1<{ fontSize?: string; padding?: string }>`
   font-size: ${({fontSize}) => fontSize || '18px'};
@@ -67,7 +67,7 @@ export const ErrorFont = styled.h1<{ fontSize?: string; padding?: string }>`
     font-size: 16px;
   }
 
-`
+`;
 export const Loading = styled.span`
   width: 88px;
   height: 88px;
@@ -112,7 +112,7 @@ export const Loading = styled.span`
     50% {
       transform: scale(1);
     }
-`
+`;
 
 export const Header = styled.div`
   display: grid;
@@ -155,5 +155,5 @@ export const Header = styled.div`
       margin: 24px;
     }
   }
-`
+`;
 

@@ -6,27 +6,27 @@ import UserInfo from "../profile/additionalInfo/UserInfo";
 import UserPost from "../profile/additionalInfo/UserPost";
 
 const OtherProfile = () => {
-    const userInfo = useLocation()
-    const {state: otherUser} = userInfo
-    const user = localStorage.getItem('userId')
-    // @ts-ignore
-    const {id} = JSON.parse(user)
-    const {data: userPosts} = useGetUserPostsQuery(id)
-    return (
-        <div>
-            <div style={otherUser ? {top: '0'} : {top: '50vw'}}>
-                <UserInfo userInfo={otherUser}/>
-                <ActivityPageWrap>
-                    <PostsHeader>User's posts</PostsHeader>
-                    {userPosts?.posts.map((el, index) => {
-                        return (
-                            <UserPost post={el} index={index} key={index.toString()}/>
-                        );
-                    })}
-                </ActivityPageWrap>
-            </div>
-        </div>
-    );
+  const userInfo = useLocation();
+  const {state: otherUser} = userInfo;
+  const user = localStorage.getItem('userId');
+  // @ts-ignore
+  const {id} = JSON.parse(user);
+  const {data: userPosts} = useGetUserPostsQuery(id);
+  return (
+    <div>
+      <div style={otherUser ? {top: '0'} : {top: '50vw'}}>
+        <UserInfo userInfo={otherUser}/>
+        <ActivityPageWrap>
+          <PostsHeader>User's posts</PostsHeader>
+          {userPosts?.posts.map((el, index) => {
+            return (
+              <UserPost post={el} index={index} key={index.toString()}/>
+            );
+          })}
+        </ActivityPageWrap>
+      </div>
+    </div>
+  );
 };
 
 export default OtherProfile;

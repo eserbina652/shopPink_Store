@@ -11,15 +11,15 @@ interface ICustomLink {
 }
 
 const CustomLink = ({to, linkText, handleClick}: ICustomLink) => {
-    const isActive = useAppSelector(state => state.authReducer.user)
-    if (isActive) {
-        return (
-            <Link style={{textDecoration: "none", maxHeight: '40px', alignItems:'center'}} onClick={handleClick} to={to}>
-                <PrimaryFont>{linkText}</PrimaryFont>
-            </Link>
-        )
-    }
-    return <PrimaryFont>{linkText}</PrimaryFont>
+  const isActive = useAppSelector(state => state.authReducer.user);
+  if (isActive) {
+    return (
+      <Link style={{textDecoration: "none", maxHeight: '40px', alignItems:'center'}} onClick={handleClick} to={to}>
+        <PrimaryFont>{linkText}</PrimaryFont>
+      </Link>
+    );
+  }
+  return <PrimaryFont>{linkText}</PrimaryFont>;
 };
 
 export default CustomLink;

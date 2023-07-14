@@ -11,7 +11,7 @@ export const ProductDescriptionWrap = styled.div`
     margin: 7vw 3vw;
     grid-gap: 10px;
   }
-`
+`;
 
 export const ImageGallery = styled.div`
   display: flex;
@@ -34,26 +34,26 @@ export const ImageGallery = styled.div`
     max-width: 70vw;
     max-height: 30vw;
   }
-`
+`;
 export const ImageInGallery = styled.img`
   max-width: 100%;
   max-height: 80%;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
-`
+`;
 export const Image = styled.img`
   max-width: 50%;
   max-height: 50%;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
-`
+`;
 export const DescImage = styled(Image)`
   max-width: 80%;
   max-height: 80%;
-`
+`;
 
 export const IncDecWrap = styled.div`
   display: inherit;
   justify-content: center;
-`
+`;
 
 export const DescriptionBox = styled.div`
   display: grid;
@@ -76,8 +76,8 @@ export const DescriptionBox = styled.div`
     margin-left: 11vw;
     max-width: 70vw;
   }
-`
+`;
 export const FocusElement = styled.div`
     background-color: ${props => props.theme.colors.shadow};
-`
+`;
 

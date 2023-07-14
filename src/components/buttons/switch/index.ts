@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Form = styled.form`
   position: relative;
   margin-bottom: 26px;
-`
+`;
 
 export const Label = styled.label`
   input[type='checkbox'] {
@@ -25,7 +25,7 @@ export const Label = styled.label`
     }
   }
 
-`
+`;
 
 export const CheckBoxText = styled.div`
   position: relative;
@@ -81,6 +81,6 @@ export const CheckBoxText = styled.div`
       height: 16px;
     }
   }
-`
+`;
 
 

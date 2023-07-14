@@ -5,7 +5,7 @@ import {ImageSearch} from "../../components/search/products";
 export const UserInformationWrapper = styled.div`
   display: flex;
   margin: 5vh -10vw 5vw 8vw;
-`
+`;
 export const ProfileWrapper = styled.div`
   display: flex;
   margin: 30px;
@@ -21,33 +21,33 @@ export const UserMainInfo = styled.div`
   box-shadow: ${props => props.theme.colors.shadow} 5px 10px 20px 1px;
   justify-content: center;
   padding: 20px;
-`
+`;
 
 export const UserImage = styled(ImageSearch)`
   width: 50%;
   height: 28%;
   background-color: ${props => props.theme.elements.secondary};
   box-shadow: ${props => props.theme.colors.shadow} 5px 10px 20px 1px;
-`
+`;
 
 export const UserFont = styled.p`
   font-size: 22px;
   color: ${props => props.theme.elements.secondary};
   padding: 5px;
   text-align: center;
-`
+`;
 
 export const UserAdditionalInform = styled(UserMainInfo)`
   flex-direction: row;
   margin: 10px 20px;
   min-width: 97%;
   justify-content: space-around;
-`
+`;
 export const AdditionalInfoWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const ActivityPageWrap = styled.div`
   display: flex;

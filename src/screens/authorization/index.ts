@@ -9,7 +9,7 @@ export const GridBox = styled.div<{ alignItems?: string; justifyContent?: string
   border: ${props => props.theme.colors.secondary};
   min-height: 45vw;
   background-color: ${props => props.theme.colors.secondary};
-`
+`;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ export const Form = styled.form`
   padding: 30px;
   max-height: min-content;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.elements.secondary};
-`
+`;
 
 export const Inputs = styled.input.attrs({ type: "text" })`
   background: ${props => props.theme.elements.primary};

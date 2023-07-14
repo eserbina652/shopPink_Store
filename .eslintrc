@@ -14,7 +14,7 @@
      "no-console": "error",
      "no-plusplus": "error",
      "eol-last": "off",
-     "max-len": ["error", 100, {"ignoreUrls": true}],//максимальна довжина
+     "max-len": ["off"],//максимальна довжина
      //строки не включаючи URL адрессу
      "no-tabs": "error",
      "comma-dangle": "error",//кома на кінці елементів об'єктів

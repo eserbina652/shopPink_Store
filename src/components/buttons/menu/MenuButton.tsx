@@ -10,36 +10,36 @@ interface IMenuButton {
 }
 
 const MenuButton = ({isActive}: IMenuButton) => {
-    const [menu, setMenu] = useState(false)
-    const {data: categories = []} = useGetCategoriesQuery();
-    const handleClickOutside = () => {
-        setMenu(false);
-    };
-    const handleClick = () => {
-        if (!menu) {
-            setMenu(true)
-        } else {
-            setMenu(false)
-        }
+  const [menu, setMenu] = useState(false);
+  const {data: categories = []} = useGetCategoriesQuery();
+  const handleClickOutside = () => {
+    setMenu(false);
+  };
+  const handleClick = () => {
+    if (!menu) {
+      setMenu(true);
+    } else {
+      setMenu(false);
     }
+  };
 
-    const ref = useOutsideClick(handleClickOutside)
+  const ref = useOutsideClick(handleClickOutside);
 
-    return (
-        <>
-            {/*@ts-ignore*/}
-            <div ref={ref} onClick={isActive ? handleClick : undefined}>
-                <Menu>
-                    <SecondaryFont>Menu</SecondaryFont>
-                </Menu>
-            </div>
-            <ListWrapper menu={menu} className={menu ? 'openMenu' : 'closeMenu'}>
-                {categories?.map((category, index) => (
-                    <CategoryItem key={index.toString()} category={category}/>
-                ))}
-            </ListWrapper>
-        </>
-    );
+  return (
+    <>
+      {/*@ts-ignore*/}
+      <div ref={ref} onClick={isActive ? handleClick : undefined}>
+        <Menu>
+          <SecondaryFont>Menu</SecondaryFont>
+        </Menu>
+      </div>
+      <ListWrapper menu={menu} className={menu ? 'openMenu' : 'closeMenu'}>
+        {categories?.map((category, index) => (
+          <CategoryItem key={index.toString()} category={category}/>
+        ))}
+      </ListWrapper>
+    </>
+  );
 };
 
 export default MenuButton;

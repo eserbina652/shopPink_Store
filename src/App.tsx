@@ -26,12 +26,12 @@ const App = () => {
   const navigate = useNavigate();
   const isMobile = useScreenSize();
 
-  console.log('j');
   const getInitialTheme = () => {
     const theme =localStorage.getItem('theme');
     if (theme) {
       dispatch(onBlueMode());
     }
+
   };
 
 

@@ -86,6 +86,6 @@ export const SearchedProducts = styled.div`
     box-shadow: inset 3px 10px 6px -2px ${props => props.theme.colors.shadow};
     margin: 24px;
   }
-`
+`;
 
 

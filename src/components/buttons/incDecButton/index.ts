@@ -25,4 +25,4 @@ export const PrevNextButton = styled(SeeMore)`
     padding: 3vw;
     font-size: 16px;
   }
-`
+`;

@@ -7,20 +7,20 @@ interface IInitialState {
 }
 
 const initialState: IInitialState = {
-    user: null
-}
+  user: null
+};
 
 export const authSlice = createSlice({
-    name: 'auth',
-    initialState,
-    reducers: {
-        onLogin: (state, action) => {
-            state.user = action.payload
-            return state
-        }
+  name: 'auth',
+  initialState,
+  reducers: {
+    onLogin: (state, action) => {
+      state.user = action.payload;
+      return state;
     }
-})
+  }
+});
 
-export const {onLogin} = authSlice.actions
+export const {onLogin} = authSlice.actions;
 
-export default authSlice.reducer
+export default authSlice.reducer;

@@ -7,13 +7,13 @@ interface ICategoryItem {
 }
 
 const CategoryItem = ({category}: ICategoryItem) => {
-    const navigate = useNavigate()
-    const handleClick = () => {
-        navigate('/products', {state: category})
-    }
-    return (<>
-        {<List onClick={handleClick} className='category'>{category}</List>}
-    </>)
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/products', {state: category});
+  };
+  return (<>
+    {<List onClick={handleClick} className='category'>{category}</List>}
+  </>);
 };
 
 export default CategoryItem;

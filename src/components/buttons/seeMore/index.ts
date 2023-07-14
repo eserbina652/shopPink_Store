@@ -6,4 +6,4 @@ export const SeeMore = styled(SignIn)`
   position: relative;
   justify-content: center;
   margin: 1vw 0;
-`
+`;

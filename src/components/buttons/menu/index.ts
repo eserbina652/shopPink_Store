@@ -15,7 +15,7 @@ export const Menu = styled.button`
     padding: 0;
     margin: 0;
   }
-`
+`;
 export const ListWrapper = styled.div<{ menu: boolean }>`
   background-color: ${props => props.theme.colors.secondary};
   width: auto;
@@ -88,7 +88,7 @@ export const ListWrapper = styled.div<{ menu: boolean }>`
     box-shadow: inset 3px 10px 6px -2px ${props => props.theme.colors.shadow};
     margin: 24px;
   }
-`
+`;
 export const List = styled.h2`
   display: flex;
   list-style-type: none;
@@ -106,4 +106,4 @@ export const List = styled.h2`
     border-radius: 20px;
   }
 
-`
+`;

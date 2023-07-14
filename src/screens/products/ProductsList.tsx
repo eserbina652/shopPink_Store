@@ -5,19 +5,19 @@ import {CategoryListWrap, ElementSContainer} from "../../components/products/pro
 import ProductItem from "../../components/products/productPage/ProductItem";
 
 const ProductsList = () => {
-    const {state: category} = useLocation()
-    const {data: products} = useGetProductsQuery(category)
+  const {state: category} = useLocation();
+  const {data: products} = useGetProductsQuery(category);
 
-    return (<>
-            <CategoryListWrap>
-                {products?.products.map((product, index) => (
-                    <ElementSContainer key={index.toString()}>
-                        <ProductItem key={index.toString()} product={product}/>
-                    </ElementSContainer>
-                ))}
-            </CategoryListWrap>
-        </>
-    );
+  return (<>
+    <CategoryListWrap>
+      {products?.products.map((product, index) => (
+        <ElementSContainer key={index.toString()}>
+          <ProductItem key={index.toString()} product={product}/>
+        </ElementSContainer>
+      ))}
+    </CategoryListWrap>
+  </>
+  );
 };
 
 export default ProductsList;

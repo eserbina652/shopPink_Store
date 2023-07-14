@@ -8,25 +8,25 @@ interface IPopup {
 }
 
 const initialState: IPopup = {
-    isOpen: false,
-    removeById: null
-}
+  isOpen: false,
+  removeById: null
+};
 
 const popupSlice = createSlice({
-    name: 'popup',
-    initialState,
-    reducers: {
-        onOpenPopup: (state, action) => {
-            state.isOpen = true
-            state.removeById = action.payload
-            return state
-        },
-        onClosePopup: (state) => {
-            state.isOpen = false
-            return state
-        }
+  name: 'popup',
+  initialState,
+  reducers: {
+    onOpenPopup: (state, action) => {
+      state.isOpen = true;
+      state.removeById = action.payload;
+      return state;
+    },
+    onClosePopup: (state) => {
+      state.isOpen = false;
+      return state;
     }
-})
+  }
+});
 
-export const {onOpenPopup, onClosePopup} = popupSlice.actions
-export default popupSlice.reducer
+export const {onOpenPopup, onClosePopup} = popupSlice.actions;
+export default popupSlice.reducer;

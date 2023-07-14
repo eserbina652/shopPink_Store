@@ -11,19 +11,19 @@ interface IProductItem {
 }
 
 const ProductItem = ({product}: IProductItem) => {
-    const navigate = useNavigate()
-    const handleClick = () => {
-        navigate("/productDescription", {state: product});
-    }
-    return (
-        <>
-            {!product ? <Loading/> : <Elements>
-                <Image src={product?.images[0]} alt={product?.title}/>
-                <PrimaryFont fontSize='18px'>{product?.title}</PrimaryFont>
-                <SeeMore onClick={handleClick}>See more</SeeMore>
-            </Elements>}
-        </>
-    );
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/productDescription", {state: product});
+  };
+  return (
+    <>
+      {!product ? <Loading/> : <Elements>
+        <Image src={product?.images[0]} alt={product?.title}/>
+        <PrimaryFont fontSize='18px'>{product?.title}</PrimaryFont>
+        <SeeMore onClick={handleClick}>See more</SeeMore>
+      </Elements>}
+    </>
+  );
 };
 
 export default ProductItem;

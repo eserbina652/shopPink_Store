@@ -6,11 +6,11 @@ interface IError {
 }
 
 const Error = ({error}: IError) => {
-    return (
-        <div>
-            <ErrorFont>{error}</ErrorFont>
-        </div>
-    );
+  return (
+    <div>
+      <ErrorFont>{error}</ErrorFont>
+    </div>
+  );
 };
 
 export default Error;

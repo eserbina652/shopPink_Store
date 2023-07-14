@@ -10,7 +10,7 @@ export const SearchedProduct = styled(Elements)`
   padding: 3px;
   padding-right: 5px;
   cursor: pointer;
-`
+`;
 
 export const ProductDescriptionWrap = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const ProductDescriptionWrap = styled.div`
   border-radius: 20px;
   box-shadow: inset 0px 5px 15px 5px ${props => props.theme.colors.shadow};
 
-`
+`;
 
 export const ImgWrapper = styled.div<{ width?: string; height?: string }>`
   width: ${({width}) => width || '60%'};
@@ -32,11 +32,11 @@ export const ImgWrapper = styled.div<{ width?: string; height?: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const FlexImg = styled.img`
   max-width: 95%;
   object-fit: cover;
   height: auto;
   max-height: 90%;
-`
+`;
