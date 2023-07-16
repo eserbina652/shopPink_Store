@@ -3,8 +3,7 @@ import {Header} from "../../../styles";
 import BurgerIcon from "../../../assets/images/BurgerIcon";
 import CloseButton from "../../../assets/images/CloseButton";
 import Navbar from "../../navbar/Navbar";
-import {PopupsWrapper} from "../../../popups";
-import {BurgerHeader, BurgerMenuContent, LogoName} from "./styles";
+import {BurgerHeader, BurgerMenuContent, BurgerMenuWrapper, LogoName, NavbarMobileContent} from "./styles";
 import SwitchBtn from "../switch/SwitchBtn";
 
 const BurgerMenu = () => {
@@ -12,18 +11,22 @@ const BurgerMenu = () => {
 
   return (
     <>
-      {open?<PopupsWrapper>
-        <BurgerMenuContent>
-          <BurgerHeader onClick={() => setOpen(false)}><CloseButton/></BurgerHeader>
-          <Navbar/>
-        </BurgerMenuContent>
-      </PopupsWrapper> :<Header>
+      <Header>
         <LogoName>ShopPink_Store</LogoName>
         <SwitchBtn/>
         <div onClick={() => setOpen(true)}>
           <BurgerIcon/>
         </div>
-      </Header>}
+      </Header>
+      {open&&<BurgerMenuWrapper>
+        <BurgerMenuContent>
+          <BurgerHeader onClick={() => setOpen(false)}>
+            <CloseButton/></BurgerHeader>
+          <NavbarMobileContent>
+            <Navbar/>
+          </NavbarMobileContent>
+        </BurgerMenuContent>
+      </BurgerMenuWrapper>}
     </>
   );
 };

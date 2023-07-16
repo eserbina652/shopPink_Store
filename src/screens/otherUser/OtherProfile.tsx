@@ -14,8 +14,8 @@ const OtherProfile = () => {
   const {data: userPosts} = useGetUserPostsQuery(id);
   return (
     <div>
-      <div style={otherUser ? {top: '0'} : {top: '50vw'}}>
-        <UserInfo userInfo={otherUser}/>
+      <div style={{marginTop: '50px'}}>
+        <UserInfo isUserPage={false} userInfo={otherUser}/>
         <ActivityPageWrap>
           <PostsHeader>User's posts</PostsHeader>
           {userPosts?.posts.map((el, index) => {

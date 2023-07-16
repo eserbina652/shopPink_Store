@@ -11,9 +11,12 @@ export const PopupsWrapper = styled.div`
   position: fixed;
   z-index: 10;
   @media(max-width: 768px) {
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 30px;
+  }
+  @media(max-width: 480px) {
+    align-items: center;
   }
 `;
 
@@ -43,3 +46,7 @@ export const ButtonsWrap = styled.div<{ isCenter?: boolean }>`
 `;
 
 export const YOrNButton = styled(SeeMore)``;
+
+export const MiddleText = styled.div`
+text-align: center;
+`;

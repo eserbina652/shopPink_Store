@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {api, useGetUserPostsQuery} from "../../api/api";
 import {Loading} from "../../styles";
-import {ActivityPageWrap, PostsHeader} from "./index";
+import {ActivityPageWrap, PostsHeader, UserInfoWrapper} from "./index";
 import UserInfo from "./additionalInfo/UserInfo";
 import UserPost from "./additionalInfo/UserPost";
 
@@ -21,7 +21,7 @@ const Profile = () => {
   }, []);
 
   return (<>
-    {userInfo ? <div style={userInfo ? {top: '0'} : {top: '50vh'}}>
+    {userInfo ? <UserInfoWrapper>
       <UserInfo userInfo={userInfo}/>
       <ActivityPageWrap>
         <PostsHeader>User's posts</PostsHeader>
@@ -31,7 +31,7 @@ const Profile = () => {
           );
         })}
       </ActivityPageWrap>
-    </div> : <Loading/>}
+    </UserInfoWrapper> : <Loading/>}
   </>
 
   );

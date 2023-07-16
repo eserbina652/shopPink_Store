@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {api} from "../../../api/api";
 import {DescriptionFont} from "../../../styles";
-import {InputSearch, SearchWrap} from '../products';
-import {FriendSvgWrap, SearchedUsers} from "./index";
+import {InputSearch} from '../products';
+import {FriendSvgWrap, SearchedUsers, SearchUsersWrap} from "./index";
 import SearchedUserComponent from "./user/SearchedUserComponent";
 import FriendsSvg from "../../../assets/images/FriendSvg";
 import {useOutsideClick} from "../../../hooks/detectedClick";
@@ -44,7 +44,7 @@ const SearchUser = () => {
   const ref = useOutsideClick(handleClickOutside);
 
   return (<>
-    <SearchWrap>
+    <SearchUsersWrap>
       <InputSearch
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
@@ -52,7 +52,7 @@ const SearchUser = () => {
       <FriendSvgWrap>
         <FriendsSvg/>
       </FriendSvgWrap>
-    </SearchWrap>
+    </SearchUsersWrap>
     {userList &&
                 //@ts-ignore
                 <SearchedUsers ref={ref}>

@@ -20,9 +20,9 @@ export const AppGridBox = styled.div<{ margin?: string; tempRow?: string }>`
 
 export const PrimaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   font-size: ${({fontSize}) => fontSize || '24px'};
-  color: ${props => props.theme.fontColors.primary};
+  color: ${props => props.theme.fontColors.secondary};
   padding: ${({padding}) => padding || '0.7vw'};
-
+  text-align: center;
   & a {
     text-decoration: none;
   }
@@ -132,12 +132,9 @@ export const Header = styled.div`
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   @media (max-width: 480px) {
-    //margin-top: -40px;
-    //overflow-x: scroll;
-    //overflow-y: hidden;
     ::-webkit-scrollbar {
       width: 12px;
     }

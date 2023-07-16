@@ -1,5 +1,5 @@
 import React from 'react';
-import {ButtonsWrap, CloseButton, PopupsWrapper, PopupWindow, YOrNButton} from "./index";
+import {ButtonsWrap, CloseButton, MiddleText, PopupsWrapper, PopupWindow, YOrNButton} from "./index";
 import {SecondaryFont} from "../styles";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {onClosePopup} from "../store/reducers/popup";
@@ -22,11 +22,11 @@ const Popup = () => {
         <ButtonsWrap isCenter={false}>
           <CloseButton onClick={handleClose}>x</CloseButton>
         </ButtonsWrap>
-        <div className="middle-text">
+        <MiddleText>
           <SecondaryFont>
                         Do you really want to delete this product?
           </SecondaryFont>
-        </div>
+        </MiddleText>
         <ButtonsWrap isCenter={true}>
           <YOrNButton onClick={() => {
             handleRemove();

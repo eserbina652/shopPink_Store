@@ -28,10 +28,10 @@ export const InputSearch = styled.input`
     margin-bottom: 25px;
   }
   @media (max-width: 768px) {
-    //max-width: 15vw;
-    //font-size: 16px;
-    //max-height: fit-content;
-    //margin: 0;
+    max-width: 75%;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
   }
 `;
 
@@ -40,7 +40,6 @@ export const ImageSearch = styled.img`
   height: 80px;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: -20px;
   @media (max-width: 1024px) {
     width: 60px;
     height: 60px;
@@ -69,7 +68,14 @@ export const SearchedProducts = styled.div`
   border: ${props => props.theme.buttons.secondary} 1px solid;
   border-radius: 30px;
   backdrop-filter: blur(5px);
-
+  @media (max-width: 480px) {
+    top: 270px;
+    left: 75px;
+  }
+  @media (max-width: 769px) {
+    top: 265px;
+    right: 45px;
+  }
   ::-webkit-scrollbar {
     width: 12px;
   }

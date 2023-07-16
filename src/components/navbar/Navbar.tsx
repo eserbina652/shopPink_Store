@@ -21,12 +21,15 @@ const Navbar = () => {
     <>
       {/*@ts-ignore*/}
       {isMobile? <>
-        <MenuBtn isActive={!!islogin}/>
         <CustomLink to='/home' linkText='Home'/>
         <CustomLink to='/buyBasket' linkText='Basket'/>
-        <SearchProducts src={searchProduct} alt={'search product'}/>
         <CustomLink to='/profile' linkText='Profile'/>
         <CustomLink handleClick={handleLogOut} to='/' linkText='Log Out'/>
+        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+          <MenuBtn isActive={!!islogin}/>
+          <SearchProducts src={searchProduct} alt={'search product'}/>
+        </div>
+
       </>: <>
         <MenuBtn isActive={!!islogin}/>
         <CustomLink to='/home' linkText='Home'/>

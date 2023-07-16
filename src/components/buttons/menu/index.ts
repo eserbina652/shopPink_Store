@@ -23,23 +23,45 @@ export const ListWrapper = styled.div<{ menu: boolean }>`
   border-radius: 0.5vw;
   display: flex;
   position: absolute;
-  //z-index: -3;
-  top: 7.5vw;
+  top: 135px;
   left: 0;
   padding: 10px 30px;
   flex-direction: column;
   overflow-x: hidden;
-  height: 45vw;
+  height: 80vh;
   animation-duration: 1s;
   @media (max-width: 1024px) {
-    top: 10.25vw;
+    top: 102px;
   }
   @media (max-width: 768px) {
-    top: 13.5vw;
+    top: 265px;
+    left: 30px;
+    height: 75vw;
+  }
   }
   @media (max-width: 480px) {
-    position: fixed;
-    top: 18vw;
+    width: fit-content;
+    position: absolute;
+    z-index: 3;
+    left: 9vw;
+    top: 77vw;
+    height: 130vw;
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${props => props.theme.posts.accentColor};
+      border-radius: 20px;
+      box-shadow: ${props => props.theme.buttons.secondary} 2px 4px 10px 1px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 30px;
+      background-color: transparent;
+      box-shadow: inset 3px 10px 6px -2px ${props => props.theme.colors.shadow};
+      margin: 24px;
+    }
   }
 
   &.openMenu {

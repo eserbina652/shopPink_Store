@@ -14,9 +14,10 @@ import {IUser} from "../types";
 
 interface IUserInfo {
     userInfo: IUser
+  isUserPage?: boolean
 }
 
-const UserInfo = ({userInfo}: IUserInfo) => {
+const UserInfo = ({userInfo, isUserPage=true}: IUserInfo) => {
   return (
     <ProfileWrapper>
       <UserInformationWrapper>
@@ -37,40 +38,28 @@ const UserInfo = ({userInfo}: IUserInfo) => {
         </UserMainInfo>
         <AdditionalInfoWrap>
           <PrimaryFont>Additional information</PrimaryFont>
-          <SecondaryFont>Address</SecondaryFont>
-          <UserAdditionalInform>
-            <UserFont>Address: {userInfo.address.address}</UserFont>
-            <UserFont>City&Postal code: {userInfo.address.city} {userInfo.address.postalCode}</UserFont>
-            <UserFont>State: {userInfo.address.state}</UserFont>
-          </UserAdditionalInform>
-          <SecondaryFont>Current work</SecondaryFont>
-          <UserAdditionalInform>
-            <UserFont>Address: {userInfo.company.address.address}</UserFont>
-            <UserFont>City&Postal
-                            code: {userInfo.company.address.city} {userInfo.company.address.postalCode}</UserFont>
-            <UserFont>State: {userInfo.company.address.state}</UserFont>
-            <UserFont>Company name: {userInfo.company.name}</UserFont>
-            <UserFont>Company department: {userInfo.company.department}</UserFont>
-          </UserAdditionalInform>
-          <SecondaryFont>Appearance&Health</SecondaryFont>
-          <UserAdditionalInform>
-            <UserFont>Group of blood: {userInfo.bloodGroup}</UserFont>
-            <UserFont>Color of eyes: {userInfo.eyeColor}</UserFont>
-            <UserFont>Hair color: {userInfo.hair.color}</UserFont>
-            <UserFont>Height: {userInfo.height}</UserFont>
-            <UserFont>Weight: {userInfo.weight}</UserFont>
-          </UserAdditionalInform>
-          <SecondaryFont>Credit card/Private information</SecondaryFont>
-          <UserAdditionalInform>
-            <UserFont>Card type: {userInfo.bank.cardType}</UserFont>
-            <UserFont>Card name: {userInfo.bank.currency}</UserFont>
-            <UserFont>Card number: {userInfo.bank.cardNumber}</UserFont>
-            <UserFont>Card expire: {userInfo.bank.cardExpire}</UserFont>
-            <UserFont>Card IBAN: {userInfo.bank.iban}</UserFont>
-          </UserAdditionalInform>
+          <div style={{textAlign: 'center'}}>
+            <SecondaryFont>Address</SecondaryFont>
+            <UserAdditionalInform>
+              <UserFont>Address: {userInfo.address.address}</UserFont>
+              <UserFont>City&Postal code: {userInfo.address.city} {userInfo.address.postalCode}</UserFont>
+              <UserFont>State: {userInfo.address.state}</UserFont>
+            </UserAdditionalInform>
+          </div>
+          <div style={{textAlign: 'center'}}>
+            <SecondaryFont>Current work</SecondaryFont>
+            <UserAdditionalInform>
+              <UserFont>Address: {userInfo.company.address.address}</UserFont>
+              <UserFont>City&Postal
+                code: {userInfo.company.address.city} {userInfo.company.address.postalCode}</UserFont>
+              <UserFont>State: {userInfo.company.address.state}</UserFont>
+              <UserFont>Company name: {userInfo.company.name}</UserFont>
+              <UserFont>Company department: {userInfo.company.department}</UserFont>
+            </UserAdditionalInform>
+          </div>
         </AdditionalInfoWrap>
       </UserInformationWrapper>
-      <SearchUsers/>
+      {isUserPage&&<SearchUsers/>}
     </ProfileWrapper>
   );
 };

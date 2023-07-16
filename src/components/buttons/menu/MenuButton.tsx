@@ -28,7 +28,10 @@ const MenuButton = ({isActive}: IMenuButton) => {
   return (
     <>
       {/*@ts-ignore*/}
-      <div ref={ref} onClick={isActive ? handleClick : undefined}>
+      <div ref={ref} onClick={isActive ? e => {
+        handleClick();
+        e.stopPropagation();
+      } : undefined}>
         <Menu>
           <SecondaryFont>Menu</SecondaryFont>
         </Menu>

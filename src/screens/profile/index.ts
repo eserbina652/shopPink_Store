@@ -4,12 +4,19 @@ import {ImageSearch} from "../../components/search/products";
 
 export const UserInformationWrapper = styled.div`
   display: flex;
-  margin: 5vh -10vw 5vw 8vw;
+  @media (max-width: 769px){
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  @media (max-width: 480px){
+    margin-top: 130px;
+  }
 `;
 export const ProfileWrapper = styled.div`
   display: flex;
-  margin: 30px;
-`;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 50px;`;
 
 export const UserMainInfo = styled.div`
   display: flex;
@@ -18,14 +25,14 @@ export const UserMainInfo = styled.div`
   border: ${props => props.theme.elements.secondary} 2px solid;
   align-items: center;
   border-radius: 50px;
+  height: fit-content;
   box-shadow: ${props => props.theme.colors.shadow} 5px 10px 20px 1px;
-  justify-content: center;
   padding: 20px;
 `;
 
 export const UserImage = styled(ImageSearch)`
   width: 50%;
-  height: 28%;
+  height: auto;
   background-color: ${props => props.theme.elements.secondary};
   box-shadow: ${props => props.theme.colors.shadow} 5px 10px 20px 1px;
 `;
@@ -38,30 +45,37 @@ export const UserFont = styled.p`
 `;
 
 export const UserAdditionalInform = styled(UserMainInfo)`
-  flex-direction: row;
   margin: 10px 20px;
-  min-width: 97%;
+  min-width: fit-content;
   justify-content: space-around;
+  @media (max-width: 1200px){
+    flex-direction: column;
+  }
+  
 `;
 export const AdditionalInfoWrap = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
+  justify-content: center;
 `;
 
+export const UserInfoWrapper = styled.div`
+    margin: 50px;
+  @media (max-width: 769px){
+    margin: 5px;
+  }
+`;
 export const ActivityPageWrap = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10vh 20vh 10vh 20vh;
+  margin: 80px;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   box-shadow: 0vh 1vw 5vw 0vh ${props => props.theme.posts.transparent};
-  // background: radial-gradient(
-  //   circle,
-  //    0%,
-  //   rgba(255, 246, 246, 1) 70%,
-  //   rgba(255, 192, 203, 1) 100%
-  // );
+  @media (max-width: 769px){
+    margin: 30px;
+  }
 `;
 export const PostsHeader = styled.p`
   color: ${props => props.theme.posts.secondary};
@@ -86,10 +100,6 @@ export const PostWrap = styled.div`
 
 export const PostTextWrap = styled.div`
   padding: 0;
-`;
-
-export const PostText = styled.p<{ isTag?: boolean }>`
-  font-size: ${(props) => (props.isTag ? "18px" : "20px")};
 `;
 
 export const PostReactionBlock = styled.div`

@@ -10,6 +10,14 @@ export const SearchedProduct = styled(Elements)`
   padding: 3px;
   padding-right: 5px;
   cursor: pointer;
+  @media (max-width: 768px){
+    top: 270px;
+    left: 155px;
+  }
+  @media (max-width: 480px){
+    flex-direction: column;
+    padding: 0;
+  }
 `;
 
 export const ProductDescriptionWrap = styled.div`
@@ -22,7 +30,10 @@ export const ProductDescriptionWrap = styled.div`
   width: 50%;
   border-radius: 20px;
   box-shadow: inset 0px 5px 15px 5px ${props => props.theme.colors.shadow};
-
+  @media (max-width: 480px){
+    width: 90%;
+    margin-bottom: 5px;
+  }
 `;
 
 export const ImgWrapper = styled.div<{ width?: string; height?: string }>`
@@ -32,6 +43,9 @@ export const ImgWrapper = styled.div<{ width?: string; height?: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 480px){
+    margin: 5px;
+  }
 `;
 
 export const FlexImg = styled.img`

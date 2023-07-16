@@ -3,6 +3,7 @@ import {DescriptionFont} from "../../../../styles";
 import {FlexImg, ImgWrapper, ProductDescriptionWrap, SearchedProduct} from "./index";
 import {useNavigate} from "react-router-dom";
 import {Product} from "../../../products/types";
+import useScreenSize from "../../../../hooks/useScreenSize";
 
 interface ISearchedProduct {
     product: Product
@@ -10,6 +11,7 @@ interface ISearchedProduct {
 }
 
 const SearchedProductComponent = ({product, onClose}: ISearchedProduct) => {
+  const isMobile = useScreenSize();
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/productDescription', {state: product});
@@ -19,7 +21,8 @@ const SearchedProductComponent = ({product, onClose}: ISearchedProduct) => {
       handleClick();
       onClose();
     }}>
-      <ImgWrapper height='150px'>
+      {/*@ts-ignore*/}
+      <ImgWrapper height={isMobile?'auto':'150px'}>
         <FlexImg src={product?.images[0]} alt={product?.title}/>
       </ImgWrapper>
       <ProductDescriptionWrap>

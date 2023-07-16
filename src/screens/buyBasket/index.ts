@@ -7,6 +7,7 @@ export const BasketListWrap = styled(CategoryListWrap)``;
 export const CountOfElementsWrap = styled.div`
   display: flex;
   position: relative;
+  align-self: center;
 `;
 export const IncDecButton = styled(SeeMore)`
   height: 40%;
