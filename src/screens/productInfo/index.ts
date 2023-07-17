@@ -36,8 +36,8 @@ export const ImageGallery = styled.div`
   }
 `;
 export const ImageInGallery = styled.img`
+  max-height: 90%;
   max-width: 75%;
-  height: auto;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
 `;
 export const Image = styled.img`
@@ -60,6 +60,7 @@ export const DescriptionBox = styled.div`
   border: ${props => props.theme.elements.secondary} 2px solid;
   border-radius: 30px;
   padding: 20px;
+  max-height: fit-content;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -68,7 +69,6 @@ export const DescriptionBox = styled.div`
   @media (max-width: 1024px) {
     padding: 15px;
     max-width: 55vw;
-    max-height: 50vh;
   }
   @media (max-width: 768px) {
     grid-column: 1/3;
