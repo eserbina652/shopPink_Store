@@ -14,7 +14,8 @@ const CustomLink = ({to, linkText, handleClick}: ICustomLink) => {
   const isActive = useAppSelector(state => state.authReducer.user);
   if (isActive) {
     return (
-      <Link style={{textDecoration: "none", maxHeight: '40px', alignItems:'center'}} onClick={handleClick} to={to}>
+      <Link style={{textDecoration: "none", maxHeight: '40px', width: 'fit-content',
+        margin: '0 auto'}} onClick={handleClick} to={to}>
         <PrimaryFont>{linkText}</PrimaryFont>
       </Link>
     );

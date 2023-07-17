@@ -18,7 +18,7 @@ const BurgerMenu = () => {
           <BurgerIcon/>
         </div>
       </Header>
-      {open&&<BurgerMenuWrapper>
+      {open&&<BurgerMenuWrapper onClick={() => setOpen(false)}>
         <BurgerMenuContent>
           <BurgerHeader onClick={() => setOpen(false)}>
             <CloseButton/></BurgerHeader>

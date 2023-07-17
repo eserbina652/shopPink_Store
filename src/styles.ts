@@ -116,6 +116,7 @@ export const Loading = styled.span`
 
 export const Header = styled.div`
   display: grid;
+  height: fit-content;
   position: sticky;
   padding: 35px;
   background-color: ${props => props.theme.colors.secondary};
@@ -123,6 +124,7 @@ export const Header = styled.div`
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
   justify-items: center;
   width: auto;
+  max-height: 150px;
   z-index: 2;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
   @media (max-width: 1024px) {

@@ -36,8 +36,8 @@ export const ImageGallery = styled.div`
   }
 `;
 export const ImageInGallery = styled.img`
-  max-width: 100%;
-  max-height: 80%;
+  max-width: 75%;
+  height: auto;
   box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
 `;
 export const Image = styled.img`

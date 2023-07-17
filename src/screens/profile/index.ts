@@ -9,7 +9,14 @@ export const UserInformationWrapper = styled.div`
     margin-top: 100px;
   }
   @media (max-width: 480px){
-    margin-top: 130px;
+    margin-top: 120px;
+  }
+`;
+
+export const UserInfoHelpWrap = styled.div`
+    margin-top: 50px;
+  @media (max-width: 769px) {
+    margin-top: -50px;
   }
 `;
 export const ProfileWrapper = styled.div`
@@ -88,6 +95,10 @@ export const PostsHeader = styled.p`
   border-top-right-radius: 40px;
   font-weight: bold;
   text-align: center;
+  @media (max-width: 480px) {
+    border-start-start-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 `;
 export const PostWrap = styled.div`
   display: flex;
@@ -96,6 +107,9 @@ export const PostWrap = styled.div`
   border-radius: 40px;
   margin: 5vh 5vw 5vh 5vw;
   box-shadow: 10px 10px 10px 1px rgb(146, 137, 157);
+  @media (max-width: 480px) {
+    border-radius: 20px;
+  }
 `;
 
 export const PostTextWrap = styled.div`
