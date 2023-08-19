@@ -17,12 +17,11 @@ export const ImageGallery = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: ${props => props.theme.elements.secondary} 2px solid;
+  border: ${(props) => props.theme.elements.secondary} 2px solid;
   border-radius: 30px;
-  //padding: 10px;
   max-height: 35vw;
   min-height: 35vw;
-  box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
+  box-shadow: 10px 10px 10px 1px ${(props) => props.theme.colors.shadow};
   @media (max-width: 1024px) {
     max-width: 65vw;
     max-height: 50vw;
@@ -38,26 +37,25 @@ export const ImageGallery = styled.div`
 export const ImageInGallery = styled.img`
   max-height: 90%;
   max-width: 75%;
-  box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
+  box-shadow: 10px 10px 10px 1px ${(props) => props.theme.colors.shadow};
 `;
 export const Image = styled.img`
-  max-width: 50%;
-  max-height: 50%;
-  box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
-`;
-export const DescImage = styled(Image)`
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: 100%;
 `;
 
-export const IncDecWrap = styled.div`
-  display: inherit;
+export const ImageWrap = styled.div`
+  max-width: 250px;
+  max-height: 250px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 10px 1px ${(props) => props.theme.colors.shadow};
 `;
 
 export const DescriptionBox = styled.div`
   display: grid;
-  border: ${props => props.theme.elements.secondary} 2px solid;
+  border: ${(props) => props.theme.elements.secondary} 2px solid;
   border-radius: 30px;
   padding: 20px;
   max-height: fit-content;
@@ -65,7 +63,7 @@ export const DescriptionBox = styled.div`
   align-items: center;
   flex-direction: column;
   grid-template-rows: 0.3fr 0.3fr 0.3fr 0.6fr 0.3fr;
-  box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
+  box-shadow: 10px 10px 10px 1px ${(props) => props.theme.colors.shadow};
   @media (max-width: 1024px) {
     padding: 15px;
     max-width: 55vw;
@@ -78,6 +76,5 @@ export const DescriptionBox = styled.div`
   }
 `;
 export const FocusElement = styled.div`
-    background-color: ${props => props.theme.colors.shadow};
+  background-color: ${(props) => props.theme.colors.shadow};
 `;
-

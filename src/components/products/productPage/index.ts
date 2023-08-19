@@ -2,16 +2,13 @@ import styled from "styled-components";
 
 export const ElementSContainer = styled.div`
   display: flex;
-  height: fit-content;
+  height: auto;
+  padding: 20px;
   min-height: 300px;
-  border: 3px solid ${props => props.theme.buttons.secondary};
+  border: 3px solid ${(props) => props.theme.buttons.secondary};
   border-radius: 20px;
   justify-content: center;
-  box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
-  margin: 30px;
-  @media (max-width: 769px) {
-    max-height: 45vw;
-  }
+  box-shadow: 10px 10px 10px 1px ${(props) => props.theme.colors.shadow};
   @media (max-width: 480px) {
     align-items: center;
     padding: 20px;
@@ -40,8 +37,10 @@ export const Elements = styled.div`
 
 export const CategoryListWrap = styled.div`
   display: flex;
-  margin-left: 10%;
-  max-width: 85%;
+  width: 100%;
+  justify-content: center;
+  padding: 70px 10%;
+  gap: 40px;
   flex-wrap: wrap;
   @media (max-width: 769px) {
     align-items: center;

@@ -11,15 +11,14 @@
 ,
    "rules": {
      "semi": "error", //крапка із комою буде сприйматися як помилка
-     "no-console": "error",
      "no-plusplus": "error",
      "eol-last": "off",
      "max-len": ["off"],//максимальна довжина
      //строки не включаючи URL адрессу
      "no-tabs": "error",
-     "comma-dangle": "error",//кома на кінці елементів об'єктів
+     "comma-dangle": "off",//кома на кінці елементів об'єктів
      "prefer-destructuring": "error",
-     "indent": ["error", 2], // кількість відступів
+     "indent": "off", // кількість відступів
      "no-param-reassign": "error"//перевизначення змінних
    }
 }

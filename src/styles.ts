@@ -1,5 +1,4 @@
-import styled, {createGlobalStyle} from "styled-components";
-
+import styled, { createGlobalStyle } from "styled-components";
 
 export const Global = createGlobalStyle`
   * {
@@ -12,16 +11,16 @@ export const Global = createGlobalStyle`
 export const AppGridBox = styled.div<{ margin?: string; tempRow?: string }>`
   display: grid;
   position: relative;
-  margin: ${({margin}) => margin || '0'};
-  border: ${props => props.theme.colors.secondary};
-  grid-template-rows: ${({tempRow}) => tempRow || '0.2fr 3fr'};
-  background-color: ${props => props.theme.colors.secondary};
+  margin: ${({ margin }) => margin || "0"};
+  border: ${(props) => props.theme.colors.secondary};
+  grid-template-rows: ${({ tempRow }) => tempRow || "0.2fr 3fr"};
+  background-color: ${(props) => props.theme.colors.secondary};
 `;
 
 export const PrimaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
-  font-size: ${({fontSize}) => fontSize || '24px'};
-  color: ${props => props.theme.fontColors.secondary};
-  padding: ${({padding}) => padding || '0.7vw'};
+  font-size: ${({ fontSize }) => fontSize || "24px"};
+  color: ${(props) => props.theme.fontColors.secondary};
+  padding: ${({ padding }) => padding || "0.7vw"};
   text-align: center;
   & a {
     text-decoration: none;
@@ -36,9 +35,9 @@ export const PrimaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
 `;
 
 export const SecondaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
-  font-size: ${({fontSize}) => fontSize || '20px'};
-  color: ${props => props.theme.fontColors.secondary};
-  padding: ${({padding}) => padding || '10px'};
+  font-size: ${({ fontSize }) => fontSize || "20px"};
+  color: ${(props) => props.theme.fontColors.secondary};
+  padding: ${({ padding }) => padding || "10px"};
   @media (max-width: 1024px) {
     font-size: 18px;
   }
@@ -47,10 +46,13 @@ export const SecondaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   }
 `;
 
-export const DescriptionFont = styled.h1<{ fontSize?: string; padding?: string }>`
-  font-size: ${({fontSize}) => fontSize || '20px'};
-  color: ${props => props.theme.fontColors.description};
-  padding: ${({padding}) => padding || '10px'};
+export const DescriptionFont = styled.h1<{
+  fontSize?: string;
+  padding?: string;
+}>`
+  font-size: ${({ fontSize }) => fontSize || "20px"};
+  color: ${(props) => props.theme.fontColors.description};
+  padding: ${({ padding }) => padding || "10px"};
   @media (max-width: 1024px) {
     font-size: 18px;
   }
@@ -60,13 +62,12 @@ export const DescriptionFont = styled.h1<{ fontSize?: string; padding?: string }
 `;
 
 export const ErrorFont = styled.h1<{ fontSize?: string; padding?: string }>`
-  font-size: ${({fontSize}) => fontSize || '18px'};
-  color: ${props => props.theme.fontColors.primary};
-  padding: ${({padding}) => padding || '10px'};
+  font-size: ${({ fontSize }) => fontSize || "18px"};
+  color: ${(props) => props.theme.fontColors.primary};
+  padding: ${({ padding }) => padding || "10px"};
   @media (max-width: 1024px) {
     font-size: 16px;
   }
-
 `;
 export const Loading = styled.span`
   width: 88px;
@@ -93,7 +94,7 @@ export const Loading = styled.span`
   &::before {
     top: auto;
     bottom: 0;
-    background-color: ${props => props.theme.elements.secondary};
+    background-color: ${(props) => props.theme.elements.secondary};
     animation-delay: 0.5s;
   }
 
@@ -115,18 +116,20 @@ export const Loading = styled.span`
 `;
 
 export const Header = styled.div`
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: fit-content;
   position: sticky;
-  padding: 35px;
-  background-color: ${props => props.theme.colors.secondary};
+  padding: 25px 5%;
+  background-color: ${(props) => props.theme.colors.secondary};
   top: 0;
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
   justify-items: center;
   width: auto;
   max-height: 150px;
   z-index: 2;
-  box-shadow: 10px 10px 10px 1px ${props => props.theme.colors.shadow};
+  box-shadow: 10px 10px 10px 1px ${(props) => props.theme.colors.shadow};
   @media (max-width: 1024px) {
     padding: 25px 20px 10px 20px;
   }
@@ -142,17 +145,16 @@ export const Header = styled.div`
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: ${props => props.theme.posts.accentColor};
+      background-color: ${(props) => props.theme.posts.accentColor};
       border-radius: 20px;
-      box-shadow: ${props => props.theme.buttons.secondary} 2px 4px 10px 1px;
+      box-shadow: ${(props) => props.theme.buttons.secondary} 2px 4px 10px 1px;
     }
 
     ::-webkit-scrollbar-track {
       border-radius: 30px;
       background-color: transparent;
-      box-shadow: inset 3px 10px 6px -2px ${props => props.theme.colors.shadow};
+      box-shadow: inset 3px 10px 6px -2px ${(props) => props.theme.colors.shadow};
       margin: 24px;
     }
   }
 `;
-
