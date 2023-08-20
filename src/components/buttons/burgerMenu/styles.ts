@@ -3,6 +3,7 @@ import { PopupsWrapper } from "../../../popups";
 
 export const BurgerMenuWrapper = styled(PopupsWrapper)`
   align-items: flex-start;
+  height: 100svh;
 `;
 export const BurgerMenuContent = styled.div`
   display: flex;

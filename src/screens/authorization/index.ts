@@ -25,8 +25,12 @@ export const Form = styled.form`
   background-color: ${(props) => props.theme.colors.primary};
   border-radius: 20px;
   padding: 30px;
+  margin: 0 auto;
   max-height: min-content;
   box-shadow: 10px 10px 10px 1px ${(props) => props.theme.elements.secondary};
+  @media (max-width: 768px) {
+    margin-top: 120px;
+  }
 `;
 
 export const Inputs = styled.input.attrs({ type: "text" })`
