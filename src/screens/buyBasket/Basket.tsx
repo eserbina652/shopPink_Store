@@ -32,7 +32,7 @@ const Basket = ({ product }: IBasket) => {
         <PrimaryFont fontSize="1vw">{product?.title}</PrimaryFont>
         <CountOfElementsWrap>
           <IncDecButton onClick={handleDecrease}>-</IncDecButton>
-          <SecondaryFont style={{ marginTop: "12px" }}>
+          <SecondaryFont style={{ marginTop: "12px" }} bg={"transparent"}>
             {product?.count}
           </SecondaryFont>
           <IncDecButton onClick={handleIncrease}>+</IncDecButton>

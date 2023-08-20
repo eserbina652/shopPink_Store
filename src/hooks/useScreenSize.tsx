@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-let useScreenSize = () => {};
+let useScreenSize = (): any => {};
 
 if (!process.env.STAGING) {
   useScreenSize = () => {
@@ -10,12 +10,12 @@ if (!process.env.STAGING) {
     };
 
     useEffect(() => {
-      window.addEventListener('resize', handleWindowSizeChange);
+      window.addEventListener("resize", handleWindowSizeChange);
       return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
+        window.removeEventListener("resize", handleWindowSizeChange);
       };
     }, []);
-    return (width <= 768);
+    return width <= 768;
   };
 } else {
   useScreenSize = () => {

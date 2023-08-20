@@ -1,29 +1,37 @@
 import styled from "styled-components";
 
-export const GridBox = styled.div<{ alignItems?: string; justifyContent?: string; justifySelf?: string; margin?: string; tempCol?:string; tempRow?:string; isLoginned?:boolean }>`
+export const GridBox = styled.div<{
+  alignItems?: string;
+  justifyContent?: string;
+  justifySelf?: string;
+  margin?: string;
+  tempCol?: string;
+  tempRow?: string;
+  isLoginned?: boolean;
+}>`
   display: flex;
   position: relative;
-  align-items: ${({alignItems}) => alignItems || 'center'};
-  justify-content: ${({justifyContent}) => justifyContent || 'center'};
-  margin: ${({margin}) => margin || '0'};
-  border: ${props => props.theme.colors.secondary};
+  align-items: ${({ alignItems }) => alignItems || "center"};
+  justify-content: ${({ justifyContent }) => justifyContent || "center"};
+  margin: ${({ margin }) => margin || "0"};
+  border: ${(props) => props.theme.colors.secondary};
   min-height: 45vw;
-  background-color: ${props => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.secondary};
 `;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  border: 2px ${props => props.theme.elements.secondary} solid;
-  background-color: ${props => props.theme.colors.primary};
+  border: 2px ${(props) => props.theme.elements.secondary} solid;
+  background-color: ${(props) => props.theme.colors.primary};
   border-radius: 20px;
   padding: 30px;
   max-height: min-content;
-  box-shadow: 10px 10px 10px 1px ${props => props.theme.elements.secondary};
+  box-shadow: 10px 10px 10px 1px ${(props) => props.theme.elements.secondary};
 `;
 
 export const Inputs = styled.input.attrs({ type: "text" })`
-  background: ${props => props.theme.elements.primary};
-  color: ${props => props.theme.fontColors.primary};
+  background: ${(props) => props.theme.elements.primary};
+  color: ${(props) => props.theme.fontColors.primary};
   margin-top: 10px;
   cursor: pointer;
   margin-bottom: 0;
@@ -32,7 +40,11 @@ export const Inputs = styled.input.attrs({ type: "text" })`
   font-size: 20px;
   border-radius: 5px;
   height: 35px;
-  border-color: ${props => props.theme.elements.primary};
-  outline-color: ${props => props.theme.elements.secondary};
+  border-color: ${(props) => props.theme.elements.primary};
+  outline-color: ${(props) => props.theme.elements.secondary};
   text-align: center;
+`;
+
+export const AppBgWrap = styled.div`
+  background-color: ${(props) => props.theme.elements.primary};
 `;

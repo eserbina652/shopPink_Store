@@ -124,6 +124,8 @@ export const PostTextWrap = styled.div`
 export const PostReactionBlock = styled.div`
   display: flex;
   justify-content: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   border-top: 1px solid ${(props) => props.theme.buttons.primary};
 `;
 

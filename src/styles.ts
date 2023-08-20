@@ -5,6 +5,7 @@ export const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
   }
 `;
 
@@ -34,9 +35,14 @@ export const PrimaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
   }
 `;
 
-export const SecondaryFont = styled.h1<{ fontSize?: string; padding?: string }>`
+export const SecondaryFont = styled.h1<{
+  fontSize?: string;
+  padding?: string;
+  bg?: string;
+}>`
   font-size: ${({ fontSize }) => fontSize || "20px"};
   color: ${(props) => props.theme.fontColors.secondary};
+  background-color: ${({ bg, theme }) => (bg ? bg : theme.buttons.secondary)};
   padding: ${({ padding }) => padding || "10px"};
   @media (max-width: 1024px) {
     font-size: 18px;
@@ -64,6 +70,7 @@ export const DescriptionFont = styled.h1<{
 export const ErrorFont = styled.h1<{ fontSize?: string; padding?: string }>`
   font-size: ${({ fontSize }) => fontSize || "18px"};
   color: ${(props) => props.theme.fontColors.primary};
+  background: ${(props) => props.theme.elements.primary};
   padding: ${({ padding }) => padding || "10px"};
   @media (max-width: 1024px) {
     font-size: 16px;

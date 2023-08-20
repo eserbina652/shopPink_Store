@@ -43,7 +43,7 @@ const App = () => {
   }, []);
   return (
     <ThemeProvider theme={theme ? themeBlue : themePink}>
-      <AppGridBox style={{ minHeight: "100svh" }} tempRow={"0.2fr 0fr"}>
+      <AppGridBox style={{ height: "100svh" }} tempRow={"0.2fr 0fr"}>
         {/*@ts-ignore*/}
         {isMobile ? (
           <BurgerMenu />
